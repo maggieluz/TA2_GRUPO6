@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "4c74a3b3-199b-45d7-9670-51f9ca6102d3",
+		"name": "Peliculas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "registrarPelicula",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"titulo\": \"AVENGERS 2\",\r\n        \"anio\": \"2019\",\r\n        \"formato\": \"MP4\",\r\n        \"nacionalidad\": \"Estadounidense\",\r\n        \"idioma\": \"Ingles\",\r\n        \"descripcion\": \"Pelicula basada en los comics de marvel\",\r\n        \"director\": \"Hermanos Russo\",\r\n        \"fechaEstreno\": \"10/12/2019\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/pelicula",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pelicula"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizarPelicula",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"codigo\": 2,\r\n        \"titulo\": \"AVENGERS 3 END GAME\",\r\n        \"anio\": \"2019\",\r\n        \"formato\": \"MP4\",\r\n        \"nacionalidad\": \"Estadounidense\",\r\n        \"idioma\": \"Ingles\",\r\n        \"descripcion\": \"Pelicula basada en los comics de marvel\",\r\n        \"director\": \"Hermanos Russo\",\r\n        \"fechaEstreno\": \"10/12/2019\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/pelicula",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pelicula"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarPeliculas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/peliculas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "peliculaxtitulo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/peliculas/AVENGERS 3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas",
+						"AVENGERS 3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
